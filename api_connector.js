@@ -44,7 +44,10 @@ var APIConnector = (function () {
         outgoingMessage:false,
         displayNameChange: false,
         participantJoined: false,
-        participantLeft: false
+        participantLeft: false,
+        joinedRoom: false,
+        conferenceCreated: false,
+        recordingStateChanged: false
     };
 
     /**

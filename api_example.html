@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="external_api.js"></script>
+</head>
+<body>
+<script>
+    var domain = "jitsi.example.com:8081";
+    var room = "JitsiMeetAPIExample3";
+    var width = 300;
+    var height = 300;
+    var api = new JitsiMeetExternalAPI(domain, room, width, height);
+
+    var my_jid = "";
+
+    api.addEventListener('participantJoined', function(message) {
+        console.log("received event: participantJoined");
+       console.log(message.jid);
+    });
+
+
+    api.addEventListener('joinedRoom', function(message) {
+        console.log("received event: joinedRoom");
+        console.log(message.jid);
+    });
+/*
+    api.bind('entered.muc', function(eventName, jid, info, pres) {
+        console.log("received event:");
+        console.log(eventName);
+        console.log(jid);
+        console.log(info);
+        console.log(pres);
+    });
+
+    api.bind('joined.muc', function(eventName, jid, info) {
+        console.log("received event:");
+        console.log(eventName);
+        console.log(jid);
+        console.log(info);
+
+        my_jid = jid;
+    });
+
+    api.bind('conferenceCreated.jingle', function(eventName, focus) {
+        console.log("received event:");
+        console.log(eventName);
+        console.log(focus);
+        console.log("participant names:");
+        console.log(focus.peers);
+    });
+
+    api.bind('callincoming.jingle', function(eventName, sid) {
+        console.log("received event:");
+        console.log(eventName);
+        console.log(sid);
+        console.log("my name is: " + my_jid);
+    });*/
+
+
+</script>
+</body>
+</html>
