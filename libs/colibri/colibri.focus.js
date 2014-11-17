@@ -197,9 +197,10 @@ ColibriFocus.prototype.setRecording = function(state, token, callback) {
             console.log('Set recording "', state, '". Result:', result);
             var recordingElem = $(result).find('>conference>recording');
             var newState = ('true' === recordingElem.attr('state'));
+            var directory = (newState) ? recordingElem.attr('directory') : '';
 
             self.recordingEnabled = newState;
-            callback(newState);
+            callback(newState, directory);
         },
         function (error) {
             console.warn(error);

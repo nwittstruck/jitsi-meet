@@ -35,7 +35,10 @@ var APIConnector = (function () {
      *              outgoingMessage: boolean,
      *              displayNameChange: boolean,
      *              participantJoined: boolean,
-     *              participantLeft: boolean
+     *              participantLeft: boolean,
+     *              joinedRoom: boolean,
+     *              conferenceCreated: boolean,
+     *              recordingStateChanged: boolean
      *      }}
      */
     var events =

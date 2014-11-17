@@ -574,6 +574,14 @@ $(document).bind('conferenceCreated.jingle', function (event, focus)
     }
 });
 
+$(document).bind('conferenceCreated.jingle', function(event, focus)
+{
+    if(APIConnector.isEnabled() && APIConnector.isEventEnabled("conferenceCreated"))
+    {
+        APIConnector.triggerEvent("conferenceCreated", {conferenceId: focus.confid, peers: focus.peers});
+    }
+});
+
 $(document).bind('callterminated.jingle', function (event, sid, jid, reason) {
     // Leave the room if my call has been remotely terminated.
     if (connection.emuc.joined && focus == null && reason === 'kick') {
@@ -1063,12 +1071,18 @@ function toggleRecording() {
     Toolbar.toggleRecordingButtonState();
     focus.setRecording(!oldState,
                         recordingToken,
-                        function (state) {
+                        function (state, directory) {
                             console.log("New recording state: ", state);
                             if (state == oldState) //failed to change, reset the token because it might have been wrong
                             {
                                 Toolbar.toggleRecordingButtonState();
                                 setRecordingToken(null);
+                            }
+                            else {
+                                if(APIConnector.isEnabled() && APIConnector.isEventEnabled("recordingStateChanged"))
+                                {
+                                    APIConnector.triggerEvent("recordingStateChanged", {state: state, directory: directory});
+                                }
                             }
                         }
     );
