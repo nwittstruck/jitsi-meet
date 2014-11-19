@@ -188,10 +188,6 @@
                         <i id="lockIcon" class="icon-security"></i>
                     </a>
                     <div class="header_button_separator"></div>
-                    <a class="button" data-container="body" data-toggle="popover" data-placement="bottom" content="Invite others" onclick="Toolbar.openLinkDialog();">
-                        <i class="icon-link"></i>
-                    </a>
-                    <div class="header_button_separator"></div>
                     <span class="toolbar_span">
                         <a class="button" data-container="body" data-toggle="popover" shortcut="toggleChatPopover" data-placement="bottom" content="Open / close chat" onclick='BottomToolbar.toggleChat();'>
                             <i id="chatButton" class="icon-chat">
@@ -221,16 +217,6 @@
                     <a class="button" data-container="body" data-toggle="popover" data-placement="bottom" content="Enter / Exit Full Screen" onclick='buttonClick("#fullScreen", "icon-full-screen icon-exit-full-screen");Toolbar.toggleFullScreen();'>
                         <i id="fullScreen" class="icon-full-screen"></i>
                     </a>
-                    <span id="sipCallButton" style="display: none">
-                        <div class="header_button_separator"></div>
-                        <a class="button" data-container="body" data-toggle="popover" data-placement="bottom" content="Call SIP number" onclick='callSipButtonClicked();'>
-                            <i class="icon-telephone"></i></a>
-                    </span>
-                    <div class="header_button_separator"></div>
-                    <span id="hangup">
-                        <a class="button" data-container="body" data-toggle="popover" data-placement="bottom" content="Hang Up" onclick='hangup();'>
-                            <i class="icon-hangup" style="color:#ff0000;font-size: 1.4em;"></i>
-                        </a>
                     </span>
                 </span>
             </div>

@@ -7,7 +7,7 @@ var JitsiMeetExternalAPI = (function()
      * The minimum width for the Jitsi Meet frame
      * @type {number}
      */
-    var MIN_WIDTH = 790;
+    var MIN_WIDTH = 300;
 
     /**
      * The minimum height for the Jitsi Meet frame
@@ -48,7 +48,7 @@ var JitsiMeetExternalAPI = (function()
         this.iframeHolder.style.width = width + "px";
         this.iframeHolder.style.height = height + "px";
         this.frameName = "jitsiConferenceFrame" + JitsiMeetExternalAPI.id;
-        this.url = "//" + domain + "/";
+        this.url = "https://" + domain + "/";
         if(room_name)
             this.url += room_name;
         this.url += "#external";

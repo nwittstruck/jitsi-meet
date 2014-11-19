@@ -23,7 +23,8 @@ var APIConnector = (function () {
         muteVideo: toggleVideo,
         toggleFilmStrip: BottomToolbar.toggleFilmStrip,
         toggleChat: BottomToolbar.toggleChat,
-        toggleContactList: BottomToolbar.toggleContactList
+        toggleContactList: BottomToolbar.toggleContactList,
+        setRecordingToken: setRecordingToken
     };
 
 
