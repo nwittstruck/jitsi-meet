@@ -676,11 +676,6 @@ $(document).bind('joined.muc', function (event, jid, info) {
         Toolbar.showRecordingButton(false);
     }
 
-    if(APIConnector.isEnabled() && APIConnector.isEventEnabled("joinedRoom"))
-    {
-        APIConnector.triggerEvent("joinedRoom",{jid: jid});
-    }
-
     if (!focus)
     {
         Toolbar.showSipCallButton(false);

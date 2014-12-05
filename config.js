@@ -1,16 +1,16 @@
 var config = {
     hosts: {
-        domain: 'jitsi.example.com',
+        domain: 'vm-teusner-webrtc.eaalab.hpi.uni-potsdam.de',
         //anonymousdomain: 'guest.example.com',
-        muc: 'conference.jitsi.example.com', // FIXME: use XEP-0030
-        bridge: 'jitsi-videobridge.jitsi.example.com', // FIXME: use XEP-0030
+        muc: 'conference.vm-teusner-webrtc.eaalab.hpi.uni-potsdam.de', // FIXME: use XEP-0030
+        bridge: 'jitsi-videobridge.vm-teusner-webrtc.eaalab.hpi.uni-potsdam.de', // FIXME: use XEP-0030
         //call_control: 'callcontrol.jitsi-meet.example.com'
     },
 //  getroomnode: function (path) { return 'someprefixpossiblybasedonpath'; },
 //  useStunTurn: true, // use XEP-0215 to fetch STUN and TURN server
 //  useIPv6: true, // ipv6 support. use at your own risk
     useNicks: false,
-    bosh: '//jitsi.example.com:8081/http-bind', // FIXME: use xep-0156 for that
+    bosh: '//vm-teusner-webrtc.eaalab.hpi.uni-potsdam.de/http-bind', // FIXME: use xep-0156 for that
     clientNode: 'http://jitsi.org/jitsimeet', // The name of client node advertised in XEP-0115 'c' stanza
     //defaultSipNumber: '', // Default SIP number
     desktopSharing: 'ext', // Desktop sharing method. Can be set to 'ext', 'webrtc' or false to disable.

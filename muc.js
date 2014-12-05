@@ -24,6 +24,12 @@ Strophe.addConnectionPlugin('emuc', {
 
         console.info("Joined MUC as " + this.myroomjid);
 
+        if(APIConnector.isEnabled() && APIConnector.isEventEnabled("joinedRoom"))
+        {
+            APIConnector.triggerEvent("joinedRoom",{jid: jid});
+            console.log("triggering event joinedroom")
+        }
+
         this.initPresenceMap(this.myroomjid);
 
         if (!this.roomjid) {

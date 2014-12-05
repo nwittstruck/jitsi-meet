@@ -114,7 +114,7 @@ var APIConnector = (function () {
                 APIConnector.processEvent(message);
                 break;
             default:
-                console.error("Unknown type of the message");
+                //console.error("Unknown type of the message");
                 return;
         }
 
