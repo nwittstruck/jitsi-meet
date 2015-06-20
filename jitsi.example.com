@@ -3,7 +3,7 @@ server {
 
     server_name jitsi.example.com;
     # set the root
-    root <your path here>/jitsi-meet/;
+    root /Users/nicholas/Documents/university/masterarbeit-code/jitsi-meet/;
     index index.html;
 
     # ssl
