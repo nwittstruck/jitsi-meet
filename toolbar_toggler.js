@@ -30,7 +30,10 @@ var ToolbarToggler = (function(my) {
         }
 
         // Show/hide desktop sharing button
-        showDesktopSharingButton();
+        //showDesktopSharingButton();
+        $("#desktopsharing").css({display: "none"});
+        $("#recording").css({display: "none"});
+
     };
 
     /**
