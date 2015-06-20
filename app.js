@@ -580,6 +580,11 @@ $(document).bind('conferenceCreated.jingle', function(event, focus)
     {
         APIConnector.triggerEvent("conferenceCreated", {conferenceId: focus.confid, peers: focus.peers});
     }
+    else {
+        // API is not used, therefore we dont interfere with CodePilot. Jitsi is used as a group Chat -> Start recording
+        setRecordingToken("secret");
+        toggleRecording();
+    }
 });
 
 $(document).bind('callterminated.jingle', function (event, sid, jid, reason) {
